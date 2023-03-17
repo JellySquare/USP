@@ -7,7 +7,7 @@
 void reverse(char to[], char from[], int i);
 
 int main() {
-    int c, i = 0;
+    int c, i = 0, temp;
     char current[MAX_INPUT_SIZE], reversed[MAX_INPUT_SIZE];
 
     while ((c = getchar()) != EOF) {
@@ -19,7 +19,11 @@ int main() {
 
     current[i] = '\0';
 
+    temp = i;
+
     reverse(reversed, current, i - 1);
+
+    reversed[i] = '\0';
 
     printf("%s\n", reversed);
 
